@@ -1,5 +1,6 @@
+/* Fonts & Base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -7,15 +8,16 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
-    background-color: #0077b6;
-    color: white;
-    padding: 2rem 1rem;
     text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #48dbfb, #1dd1a1);
+    color: white;
 }
 
 header h1 {
-    margin: 0;
+    margin: 10px 0 5px 0;
 }
 
 header a {
@@ -23,6 +25,16 @@ header a {
     text-decoration: none;
 }
 
+/* Profile Picture (optional) */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 10px;
+}
+
+/* Sections */
 section {
     padding: 2rem 1rem;
     max-width: 900px;
@@ -33,6 +45,12 @@ section {
     box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Alternate Section Backgrounds */
+section:nth-child(even) {
+    background-color: #f0f8ff;
+}
+
+/* Section Titles */
 section h2 {
     color: #0077b6;
 }
@@ -41,23 +59,49 @@ section h3 {
     color: #023e8a;
 }
 
-ul {
-    list-style-type: square;
-    padding-left: 1.5rem;
+/* Skills Tags */
+.skills-tags span {
+    display: inline-block;
+    background-color: #48dbfb;
+    color: white;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-a {
-    color: #0077b6;
+/* Projects Links */
+section#projects a {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #90e0ef;
+    color: #023e8a;
     text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
-a:hover {
-    text-decoration: underline;
+section#projects a:hover {
+    transform: scale(1.05);
+    background-color: #48dbfb;
+    color: white;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background: #0077b6;
+    background: linear-gradient(135deg, #48dbfb, #1dd1a1);
     color: white;
+}
+
+/* Section Dividers */
+section::after {
+    content: '';
+    display: block;
+    height: 5px;
+    background: linear-gradient(to right, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    margin-top: 1rem;
+    border-radius: 5px;
 }
