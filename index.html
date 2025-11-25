@@ -1,73 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vineeth Reddy Kothakapu Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vineeth Reddy Kothakapu — Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Vineeth Reddy Kothakapu</h1>
-        <p>Master's in Business Information Systems | Project Management Track</p>
-        <p>📧 <a href="mailto:vineethkothakapu@gmail.com">vineethkothakapu@gmail.com</a> | 📞 947-254-4345 | <a href="https://www.linkedin.com/in/vineeth-reddy-kothakapu-2b4a81389" target="_blank">LinkedIn</a></p>
-    </header>
 
-    <section id="about">
+  <!-- THEME SWITCHER -->
+  <div class="theme-switcher" aria-hidden="false">
+    <label for="themeSelect">Theme</label>
+    <select id="themeSelect" aria-label="Choose theme">
+      <option value="theme-blue">Blue Gradient</option>
+      <option value="theme-purple">Purple Neon</option>
+      <option value="theme-blackgold">Black & Gold</option>
+      <option value="theme-darkteal">Dark Mode Teal</option>
+      <option value="theme-green">Green Finance</option>
+      <option value="theme-pastel">Soft Pastel</option>
+      <option value="theme-custom">Custom</option>
+    </select>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="profile">
+        <!-- optional: upload profile.jpg to repo to show -->
+        <img src="profile.jpg" alt="Vineeth Reddy Kothakapu" class="profile-pic" onerror="this.style.display='none'">
+        <div class="title-wrap">
+          <h1>Vineeth Reddy Kothakapu</h1>
+          <p class="subtitle">Master's in Business Information Systems — Project Management & Data Analytics</p>
+          <p class="contact">
+            📧 <a href="mailto:vineethkothakapu@gmail.com">vineethkothakapu@gmail.com</a> • 📞 947-254-4345 •
+            <a href="https://www.linkedin.com/in/vineeth-reddy-kothakapu-2b4a81389" target="_blank" rel="noopener">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a class="btn" id="resumeBtn" href="resume.pdf" download>Download Resume</a>
+        <nav class="nav">
+          <button data-target="about" class="nav-btn">About</button>
+          <button data-target="skills" class="nav-btn">Skills</button>
+          <button data-target="experience" class="nav-btn">Experience</button>
+          <button data-target="projects" class="nav-btn">Projects</button>
+          <button data-target="education" class="nav-btn">Education</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- ABOUT (section card + modal) -->
+    <section id="about" class="card section">
+      <div class="card-inner">
         <h2>About Me</h2>
-        <p>Dedicated and detail-oriented Analyst with 2 years of experience in software and technical support. Strong track record in diagnosing, troubleshooting, and resolving customer issues while delivering high customer satisfaction. Seeking to leverage analytical skills and technical expertise in a challenging Analyst role.</p>
+        <p>Dedicated and detail-oriented Analyst with 2 years of experience in software and technical support. Strong track record in diagnosing, troubleshooting, and resolving customer issues while delivering high customer satisfaction.</p>
+        <div class="card-actions">
+          <button class="btn open-modal" data-modal="aboutModal">Read More</button>
+        </div>
+      </div>
     </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>Azure</li>
-            <li>Active Directory</li>
-            <li>ServiceNow</li>
-            <li>Microsoft Office Suite (Excel, PowerPoint, Word, Outlook)</li>
-            <li>Python</li>
-            <li>Networking</li>
-        </ul>
-
-        <h2>Soft Skills</h2>
-        <ul>
-            <li>Strong communication</li>
-            <li>Analytical thinking</li>
-            <li>Organizational abilities</li>
-            <li>Relationship management</li>
-        </ul>
+    <!-- SKILLS -->
+    <section id="skills" class="card section">
+      <div class="card-inner">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <span class="skill">Azure</span>
+          <span class="skill">Active Directory</span>
+          <span class="skill">ServiceNow</span>
+          <span class="skill">Microsoft Office</span>
+          <span class="skill">Python</span>
+          <span class="skill">Networking</span>
+          <span class="skill soft">Communication</span>
+          <span class="skill soft">Analytical Thinking</span>
+        </div>
+        <div class="card-actions">
+          <button class="btn open-modal" data-modal="skillsModal">View Details</button>
+        </div>
+      </div>
     </section>
 
-    <section id="experience">
+    <!-- EXPERIENCE -->
+    <section id="experience" class="card section">
+      <div class="card-inner">
         <h2>Professional Experience</h2>
-        <h3>HCL Technologies — Analyst (June 2022 – December 2023)</h3>
-        <ul>
+        <div class="experience-item">
+          <h3>HCL Technologies — Analyst</h3>
+          <span class="muted">June 2022 — December 2023</span>
+          <ul>
             <li>Resolved 200+ customer tickets monthly across OS, applications, networks, and cloud environments, achieving 95% CSAT.</li>
             <li>Collaborated with Tier 3 and Development teams, reducing critical issue resolution time by 30%.</li>
-            <li>Maintained detailed documentation ensuring SLA compliance and improving communication efficiency by 20%.</li>
-            <li>Utilized ServiceNow to manage and track customer cases, streamlining resolution workflows.</li>
-            <li>Administered Active Directory for 500+ users including provisioning, password resets, and account unlocks.</li>
-            <li>Conducted training for team members and end-users, improving technical knowledge and adoption.</li>
-        </ul>
+            <li>Administered Active Directory for 500+ users; maintained documentation & SLAs.</li>
+          </ul>
+        </div>
+        <div class="card-actions">
+          <button class="btn open-modal" data-modal="experienceModal">More</button>
+        </div>
+      </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>Central Michigan University – Mount Pleasant, Michigan</strong><br>
-        Master’s in Business Information Systems (Project Management Track), Expected December 2025</p>
-    </section>
-
-    <section id="projects">
+    <!-- PROJECTS (cards) -->
+    <section id="projects" class="card section">
+      <div class="card-inner">
         <h2>Projects</h2>
-        <ul>
-            <li><a href="#" target="_blank">Project 1</a> – Short description</li>
-            <li><a href="#" target="_blank">Project 2</a> – Short description</li>
-            <li><a href="#" target="_blank">Project 3</a> – Short description</li>
-        </ul>
+
+        <div class="projects-grid">
+          <!-- Project card template — replace with real links/descriptions -->
+          <article class="project-card">
+            <h4><a href="#" target="_blank" rel="noopener">Project One</a></h4>
+            <p>Short description of the project — technologies used, outcome or link to repo.</p>
+            <div class="project-meta">
+              <span class="tag">Python</span>
+              <span class="tag">Azure</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h4><a href="#" target="_blank" rel="noopener">Project Two</a></h4>
+            <p>Short description — what you built and why it matters.</p>
+            <div class="project-meta">
+              <span class="tag">ServiceNow</span>
+              <span class="tag">Automation</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h4><a href="#" target="_blank" rel="noopener">Project Three</a></h4>
+            <p>Short description — link to live demo or GitHub repo.</p>
+            <div class="project-meta">
+              <span class="tag">AD</span>
+              <span class="tag">Scripting</span>
+            </div>
+          </article>
+        </div>
+
+      </div>
     </section>
 
-    <footer>
-        <p>© 2025 Vineeth Reddy Kothakapu</p>
-    </footer>
+    <!-- EDUCATION -->
+    <section id="education" class="card section">
+      <div class="card-inner">
+        <h2>Education</h2>
+        <p><strong>Central Michigan University</strong> — Master’s in Business Information Systems (Project Management Track). Expected Dec 2025.</p>
+        <div class="card-actions">
+          <button class="btn open-modal" data-modal="educationModal">Details</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 Vineeth Reddy Kothakapu • Crafted with❤️</p>
+  </footer>
+
+  <!-- MODALS (popups for each section) -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>About Me</h3>
+      <p>Dedicated and detail-oriented Analyst with 2 years of experience in software and technical support. Strong track record in diagnosing, troubleshooting, and resolving customer issues while delivering high customer satisfaction. Seeking to leverage analytical skills and technical expertise in a challenging Analyst role.</p>
+      <p>Feel free to contact me for collaboration or opportunities.</p>
+    </div>
+  </div>
+
+  <div id="skillsModal" class="modal">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>Skills — Details</h3>
+      <h4>Technical</h4>
+      <ul>
+        <li>Azure — basics to intermediate</li>
+        <li>Active Directory — user & group administration</li>
+        <li>ServiceNow — ticket & workflow management</li>
+        <li>Python — scripts & small automation</li>
+      </ul>
+      <h4>Soft</h4>
+      <ul>
+        <li>Strong communication</li>
+        <li>Analytical thinking</li>
+        <li>Organizational skills & relationship management</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="experienceModal" class="modal">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>Experience — HCL Technologies (June 2022 – Dec 2023)</h3>
+      <ul>
+        <li>Resolved 200+ tickets monthly across OS, apps, networks, cloud — 95% CSAT.</li>
+        <li>Reduced critical issue resolution time by 30% through cross-team collaboration.</li>
+        <li>Managed AD for 500+ users; trained team members; maintained SLA documentation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="educationModal" class="modal">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <h3>Education</h3>
+      <p>Central Michigan University — Master’s in Business Information Systems (Project Management Track). Expected Dec 2025.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
