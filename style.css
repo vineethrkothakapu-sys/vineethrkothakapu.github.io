@@ -18,9 +18,14 @@ header h1 {
     margin: 0;
 }
 
+header a {
+    color: #ffdd59;
+    text-decoration: none;
+}
+
 section {
     padding: 2rem 1rem;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     background: white;
     margin-bottom: 1rem;
@@ -30,6 +35,10 @@ section {
 
 section h2 {
     color: #0077b6;
+}
+
+section h3 {
+    color: #023e8a;
 }
 
 ul {
