@@ -1,0 +1,24 @@
+// Handle Modals
+const openBtns = document.querySelectorAll(".open-modal");
+const modals = document.querySelectorAll(".modal");
+const closeBtns = document.querySelectorAll(".close");
+
+openBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const modal = document.getElementById(btn.dataset.modal);
+        modal.style.display = "block";
+    });
+});
+
+closeBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.parentElement.parentElement.style.display = "none";
+    });
+});
+
+// Close modal on click outside
+window.onclick = function(event) {
+    modals.forEach(modal => {
+        if (event.target == modal) modal.style.display = "none";
+    });
+};
