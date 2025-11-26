@@ -15,79 +15,83 @@
 </head>
 <body>
 
-<!-- Scroll Progress Bar -->
-<div id="progress"></div>
-
-<!-- Header -->
-<header class="header-transition">
-  <div class="header-inner">
-    <div class="profile">
-      <img src="profile.jpg" alt="Vineeth Reddy Kothakapu" class="profile-pic" onerror="this.style.display='none'">
-      <div>
-        <h1 class="typing-text">Vineeth Reddy Kothakapu</h1>
-        <p class="fade-in">Analyst • Business Information Systems • Project Management & Data Analytics</p>
-        <p class="fade-in"><i class="fas fa-envelope"></i> vineethkothakapu@gmail.com • <i class="fas fa-phone"></i> 947-254-4345 • <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vineeth-reddy-kothakapu-2b4a81389" target="_blank">LinkedIn</a></p>
-      </div>
-    </div>
-    <nav class="fade-in">
-      <button onclick="openPopup('aboutPopup')"><i class="fas fa-user"></i> About</button>
-      <button onclick="openPopup('skillsPopup')"><i class="fas fa-code"></i> Skills</button>
-      <button onclick="openPopup('experiencePopup')"><i class="fas fa-briefcase"></i> Experience</button>
-      <button onclick="openPopup('educationPopup')"><i class="fas fa-graduation-cap"></i> Education</button>
-      <button onclick="openPopup('resumePopup')"><i class="fas fa-file-pdf"></i> Resume</button>
-    </nav>
-  </div>
+<!-- Navigation -->
+<header>
+  <nav>
+    <button onclick="openPopup('aboutPopup')"><i class="fas fa-user"></i> About</button>
+    <button onclick="openPopup('educationPopup')"><i class="fas fa-graduation-cap"></i> Education</button>
+    <button onclick="openPopup('experiencePopup')"><i class="fas fa-briefcase"></i> Experience</button>
+    <button onclick="openPopup('skillsPopup')"><i class="fas fa-code"></i> Skills</button>
+  </nav>
 </header>
 
-<main>
-  <section class="section fade-up">
-    <h2>Welcome</h2>
-    <p>Explore my journey, skills, projects, and achievements.</p>
-  </section>
+<!-- Cover Page -->
+<section class="page cover-page">
+  <div class="cover-content">
+    <h1>Vineeth Reddy Kothakapu</h1>
+    <p>Analyst | Business Information Systems | Project Management & Data Analytics</p>
+    <p><i class="fas fa-envelope"></i> vineethkothakapu@gmail.com • <i class="fas fa-phone"></i> 947-254-4345</p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vineeth-reddy-kothakapu-2b4a81389" target="_blank">LinkedIn</a></p>
+  </div>
+</section>
 
-  <!-- Projects Section -->
-  <section class="section fade-up" id="projects">
-    <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-    <div class="projects-grid">
-      <article class="project-card">
-        <h3>Project One</h3>
-        <p>Short description of Project One.</p>
-        <div class="project-meta">
-          <span class="tag">Python</span>
-          <span class="tag">Azure</span>
-        </div>
-      </article>
-      <article class="project-card">
-        <h3>Project Two</h3>
-        <p>Short description of Project Two.</p>
-        <div class="project-meta">
-          <span class="tag">ServiceNow</span>
-          <span class="tag">Automation</span>
-        </div>
-      </article>
-      <article class="project-card">
-        <h3>Project Three</h3>
-        <p>Short description of Project Three.</p>
-        <div class="project-meta">
-          <span class="tag">AD</span>
-          <span class="tag">Scripting</span>
-        </div>
-      </article>
-    </div>
-  </section>
-</main>
+<!-- About Page -->
+<section class="page about-page">
+  <h2>About</h2>
+  <button onclick="openPopup('aboutPopup')">View Details</button>
+</section>
+
+<!-- Education Page -->
+<section class="page education-page">
+  <h2>Education</h2>
+  <button onclick="openPopup('educationPopup')">View Details</button>
+</section>
+
+<!-- Experience Page -->
+<section class="page experience-page">
+  <h2>Experience</h2>
+  <button onclick="openPopup('experiencePopup')">View Details</button>
+</section>
+
+<!-- Skills Page -->
+<section class="page skills-page">
+  <h2>Skills</h2>
+  <button onclick="openPopup('skillsPopup')">View Details</button>
+</section>
 
 <!-- Popups -->
 <div id="aboutPopup" class="popup">
-  <div class="popup-content popup-transition">
+  <div class="popup-content">
     <span class="close" onclick="closePopup('aboutPopup')">&times;</span>
     <h2>About Me</h2>
     <p>Dedicated Analyst with 2 years of software and technical support experience. Strong analytical and problem-solving skills.</p>
   </div>
 </div>
 
+<div id="educationPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('educationPopup')">&times;</span>
+    <h2>Education</h2>
+    <p>Central Michigan University – Master’s in Business Information Systems (Project Management & Data Analytics)</p>
+    <p>Expected Graduation: December 2025</p>
+  </div>
+</div>
+
+<div id="experiencePopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('experiencePopup')">&times;</span>
+    <h2>Experience</h2>
+    <p>HCL Technologies — Analyst (June 2022 – Dec 2023)</p>
+    <ul>
+      <li>Resolved 200+ tickets monthly, 95% CSAT</li>
+      <li>Collaborated with Tier 3 & development teams</li>
+      <li>Administered Active Directory for 500+ users</li>
+    </ul>
+  </div>
+</div>
+
 <div id="skillsPopup" class="popup">
-  <div class="popup-content popup-transition">
+  <div class="popup-content">
     <span class="close" onclick="closePopup('skillsPopup')">&times;</span>
     <h2>Skills</h2>
     <ul>
@@ -104,36 +108,6 @@
       <li>Organizational Abilities</li>
       <li>Relationship Management</li>
     </ul>
-  </div>
-</div>
-
-<div id="experiencePopup" class="popup">
-  <div class="popup-content popup-transition">
-    <span class="close" onclick="closePopup('experiencePopup')">&times;</span>
-    <h2>Experience</h2>
-    <p>HCL Technologies — Analyst (June 2022 – Dec 2023)</p>
-    <ul>
-      <li>Resolved 200+ tickets monthly, 95% CSAT</li>
-      <li>Collaborated with Tier 3 and development teams</li>
-      <li>Administered Active Directory for 500+ users</li>
-    </ul>
-  </div>
-</div>
-
-<div id="educationPopup" class="popup">
-  <div class="popup-content popup-transition">
-    <span class="close" onclick="closePopup('educationPopup')">&times;</span>
-    <h2>Education</h2>
-    <p>Central Michigan University — Master’s in Business Information Systems (Project Management & Data Analytics)</p>
-    <p>Expected Graduation: Dec 2025</p>
-  </div>
-</div>
-
-<div id="resumePopup" class="popup">
-  <div class="popup-content popup-transition">
-    <span class="close" onclick="closePopup('resumePopup')">&times;</span>
-    <h2>Resume</h2>
-    <a href="resume.pdf" download class="resume-btn"><i class="fas fa-download"></i> Download Resume</a>
   </div>
 </div>
 
