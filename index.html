@@ -1,116 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vineeth Portfolio</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-
-<!-- FontAwesome Icons -->
-<script src="https://kit.fontawesome.com/a2e0e6ad38.js" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vineeth Reddy Kothakapu | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- Navigation -->
-<header>
-  <nav>
-    <button onclick="openPopup('aboutPopup')"><i class="fas fa-user"></i> About</button>
-    <button onclick="openPopup('educationPopup')"><i class="fas fa-graduation-cap"></i> Education</button>
-    <button onclick="openPopup('experiencePopup')"><i class="fas fa-briefcase"></i> Experience</button>
-    <button onclick="openPopup('skillsPopup')"><i class="fas fa-code"></i> Skills</button>
-  </nav>
-</header>
-
-<!-- Cover Page -->
-<section class="page cover-page">
-  <div class="cover-content">
+  <!-- Header -->
+  <header>
     <h1>Vineeth Reddy Kothakapu</h1>
     <p>Analyst | Business Information Systems | Project Management & Data Analytics</p>
-    <p><i class="fas fa-envelope"></i> vineethkothakapu@gmail.com • <i class="fas fa-phone"></i> 947-254-4345</p>
-    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vineeth-reddy-kothakapu-2b4a81389" target="_blank">LinkedIn</a></p>
-  </div>
-</section>
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
 
-<!-- About Page -->
-<section class="page about-page">
-  <h2>About</h2>
-  <button onclick="openPopup('aboutPopup')">View Details</button>
-</section>
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<!-- Education Page -->
-<section class="page education-page">
-  <h2>Education</h2>
-  <button onclick="openPopup('educationPopup')">View Details</button>
-</section>
-
-<!-- Experience Page -->
-<section class="page experience-page">
-  <h2>Experience</h2>
-  <button onclick="openPopup('experiencePopup')">View Details</button>
-</section>
-
-<!-- Skills Page -->
-<section class="page skills-page">
-  <h2>Skills</h2>
-  <button onclick="openPopup('skillsPopup')">View Details</button>
-</section>
-
-<!-- Popups -->
-<div id="aboutPopup" class="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closePopup('aboutPopup')">&times;</span>
+  <!-- Sections -->
+  <section id="about" class="fade-in">
     <h2>About Me</h2>
-    <p>Dedicated Analyst with 2 years of software and technical support experience. Strong analytical and problem-solving skills.</p>
-  </div>
-</div>
+    <p>I am an analytical and detail-oriented professional with expertise in Business Information Systems, Project Management, and Data Analytics. Skilled in SQL, database management, and financial planning, I thrive at transforming complex data into actionable insights.</p>
+  </section>
 
-<div id="educationPopup" class="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closePopup('educationPopup')">&times;</span>
-    <h2>Education</h2>
-    <p>Central Michigan University – Master’s in Business Information Systems (Project Management & Data Analytics)</p>
-    <p>Expected Graduation: December 2025</p>
-  </div>
-</div>
-
-<div id="experiencePopup" class="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closePopup('experiencePopup')">&times;</span>
+  <section id="experience" class="fade-in">
     <h2>Experience</h2>
-    <p>HCL Technologies — Analyst (June 2022 – Dec 2023)</p>
+    <h3>Analyst – Business Information Systems</h3>
     <ul>
-      <li>Resolved 200+ tickets monthly, 95% CSAT</li>
-      <li>Collaborated with Tier 3 & development teams</li>
-      <li>Administered Active Directory for 500+ users</li>
+      <li>Optimized SQL queries, reducing manual effort by 30%.</li>
+      <li>Collaborated with teams to implement data-driven solutions.</li>
+      <li>Developed dashboards for decision-making.</li>
     </ul>
-  </div>
-</div>
+  </section>
 
-<div id="skillsPopup" class="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closePopup('skillsPopup')">&times;</span>
+  <section id="skills" class="fade-in">
     <h2>Skills</h2>
-    <ul>
-      <li>Azure</li>
-      <li>Active Directory</li>
-      <li>ServiceNow</li>
-      <li>Python</li>
-      <li>Networking</li>
-      <li>Microsoft Office Suite</li>
-    </ul>
-    <ul>
-      <li>Strong Communication</li>
-      <li>Analytical Thinking</li>
-      <li>Organizational Abilities</li>
-      <li>Relationship Management</li>
-    </ul>
-  </div>
-</div>
+    <p>SQL & Database Management</p>
+    <div class="skills-bar"><span style="width:90%"></span></div>
+    <p>Data Analytics (Excel, Power BI, Tableau)</p>
+    <div class="skills-bar"><span style="width:85%"></span></div>
+    <p>Cloud Computing (AWS, Azure basics)</p>
+    <div class="skills-bar"><span style="width:70%"></span></div>
+  </section>
 
-<script src="script.js"></script>
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <p>Here are some of the projects I’ve worked on as a student and aspiring analyst. Each project demonstrates my ability to apply technical skills to solve problems, design systems, and deliver insights.</p>
+
+    <h3>SQL Database Management – Student Records System</h3>
+    <ul>
+      <li>Designed and implemented a relational database to manage student records.</li>
+      <li>Applied normalization techniques to reduce redundancy and improve efficiency.</li>
+      <li>Wrote advanced SQL queries for GPA calculation, enrollment trends, and reporting.</li>
+      <li>Optimized queries, reducing execution time by 40%.</li>
+      <li><em>Skills demonstrated: SQL, database design, query optimization, reporting.</em></li>
+    </ul>
+
+    <h3>Cloud Computing – AWS Cost Optimization Demo</h3>
+    <ul>
+      <li>Built a demo project on AWS to analyze monthly usage patterns.</li>
+      <li>Automated reporting using AWS Lambda and S3, reducing manual tracking.</li>
+      <li>Identified cost-saving opportunities by analyzing EC2 and storage usage.</li>
+      <li><em>Skills demonstrated: AWS basics, automation, cloud cost management.</em></li>
+    </ul>
+
+    <h3>Analytics – Retail Sales Dashboard (Concept Project)</h3>
+    <ul>
+      <li>Created a dashboard using Excel/Power BI to visualize monthly sales trends.</li>
+      <li>Highlighted top-selling products and regional performance.</li>
+      <li>Provided actionable insights, such as identifying a 15% seasonal demand increase.</li>
+      <li><em>Skills demonstrated: Data visualization, analytics, business insights.</em></li>
+    </ul>
+
+    <h3>Personal Finance – Debt Repayment Tracker</h3>
+    <ul>
+      <li>Built a structured Excel/Google Sheets tracker for managing debt repayment.</li>
+      <li>Integrated formulas for monthly progress and forecasting.</li>
+      <li>Helped visualize repayment timelines for U.S. and India debts.</li>
+      <li><em>Skills demonstrated: Financial planning, Excel formulas, problem-solving.</em></li>
+    </ul>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Email: vineethkothakapu@gmail.com</p>
+    <p>Phone: 947-254-4345</p>
+    <p><a href="https://www.linkedin.com/in/vineethkothakapu" target="_blank">LinkedIn</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Vineeth Reddy Kothakapu | Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
