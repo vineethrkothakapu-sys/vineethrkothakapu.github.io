@@ -1,217 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vineeth Reddy Kothakapu — Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vineeth Portfolio</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/a2e0e6ad38.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- THEME SWITCHER -->
-  <div class="theme-switcher" aria-hidden="false">
-    <label for="themeSelect">Theme</label>
-    <select id="themeSelect" aria-label="Choose theme">
-      <option value="theme-blue">Blue Gradient</option>
-      <option value="theme-purple">Purple Neon</option>
-      <option value="theme-blackgold">Black & Gold</option>
-      <option value="theme-darkteal">Dark Mode Teal</option>
-      <option value="theme-green">Green Finance</option>
-      <option value="theme-pastel">Soft Pastel</option>
-      <option value="theme-custom">Custom</option>
-    </select>
-  </div>
+<!-- Scroll Progress Bar -->
+<div id="progress"></div>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="profile">
-        <!-- optional: upload profile.jpg to repo to show -->
-        <img src="profile.jpg" alt="Vineeth Reddy Kothakapu" class="profile-pic" onerror="this.style.display='none'">
-        <div class="title-wrap">
-          <h1>Vineeth Reddy Kothakapu</h1>
-          <p class="subtitle">Master's in Business Information Systems — Project Management & Data Analytics</p>
-          <p class="contact">
-            📧 <a href="mailto:vineethkothakapu@gmail.com">vineethkothakapu@gmail.com</a> • 📞 947-254-4345 •
-            <a href="https://www.linkedin.com/in/vineeth-reddy-kothakapu-2b4a81389" target="_blank" rel="noopener">LinkedIn</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="header-actions">
-        <a class="btn" id="resumeBtn" href="resume.pdf" download>Download Resume</a>
-        <nav class="nav">
-          <button data-target="about" class="nav-btn">About</button>
-          <button data-target="skills" class="nav-btn">Skills</button>
-          <button data-target="experience" class="nav-btn">Experience</button>
-          <button data-target="projects" class="nav-btn">Projects</button>
-          <button data-target="education" class="nav-btn">Education</button>
-        </nav>
+<!-- Header -->
+<header class="header-transition">
+  <div class="header-inner">
+    <div class="profile">
+      <img src="profile.jpg" alt="Vineeth Reddy Kothakapu" class="profile-pic" onerror="this.style.display='none'">
+      <div>
+        <h1 class="typing-text">Vineeth Reddy Kothakapu</h1>
+        <p class="fade-in">Analyst • Business Information Systems • Project Management & Data Analytics</p>
+        <p class="fade-in"><i class="fas fa-envelope"></i> vineethkothakapu@gmail.com • <i class="fas fa-phone"></i> 947-254-4345 • <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vineeth-reddy-kothakapu-2b4a81389" target="_blank">LinkedIn</a></p>
       </div>
     </div>
-  </header>
-
-  <!-- MAIN -->
-  <main>
-    <!-- ABOUT (section card + modal) -->
-    <section id="about" class="card section">
-      <div class="card-inner">
-        <h2>About Me</h2>
-        <p>Dedicated and detail-oriented Analyst with 2 years of experience in software and technical support. Strong track record in diagnosing, troubleshooting, and resolving customer issues while delivering high customer satisfaction.</p>
-        <div class="card-actions">
-          <button class="btn open-modal" data-modal="aboutModal">Read More</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="card section">
-      <div class="card-inner">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <span class="skill">Azure</span>
-          <span class="skill">Active Directory</span>
-          <span class="skill">ServiceNow</span>
-          <span class="skill">Microsoft Office</span>
-          <span class="skill">Python</span>
-          <span class="skill">Networking</span>
-          <span class="skill soft">Communication</span>
-          <span class="skill soft">Analytical Thinking</span>
-        </div>
-        <div class="card-actions">
-          <button class="btn open-modal" data-modal="skillsModal">View Details</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="card section">
-      <div class="card-inner">
-        <h2>Professional Experience</h2>
-        <div class="experience-item">
-          <h3>HCL Technologies — Analyst</h3>
-          <span class="muted">June 2022 — December 2023</span>
-          <ul>
-            <li>Resolved 200+ customer tickets monthly across OS, applications, networks, and cloud environments, achieving 95% CSAT.</li>
-            <li>Collaborated with Tier 3 and Development teams, reducing critical issue resolution time by 30%.</li>
-            <li>Administered Active Directory for 500+ users; maintained documentation & SLAs.</li>
-          </ul>
-        </div>
-        <div class="card-actions">
-          <button class="btn open-modal" data-modal="experienceModal">More</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS (cards) -->
-    <section id="projects" class="card section">
-      <div class="card-inner">
-        <h2>Projects</h2>
-
-        <div class="projects-grid">
-          <!-- Project card template — replace with real links/descriptions -->
-          <article class="project-card">
-            <h4><a href="#" target="_blank" rel="noopener">Project One</a></h4>
-            <p>Short description of the project — technologies used, outcome or link to repo.</p>
-            <div class="project-meta">
-              <span class="tag">Python</span>
-              <span class="tag">Azure</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h4><a href="#" target="_blank" rel="noopener">Project Two</a></h4>
-            <p>Short description — what you built and why it matters.</p>
-            <div class="project-meta">
-              <span class="tag">ServiceNow</span>
-              <span class="tag">Automation</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h4><a href="#" target="_blank" rel="noopener">Project Three</a></h4>
-            <p>Short description — link to live demo or GitHub repo.</p>
-            <div class="project-meta">
-              <span class="tag">AD</span>
-              <span class="tag">Scripting</span>
-            </div>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="card section">
-      <div class="card-inner">
-        <h2>Education</h2>
-        <p><strong>Central Michigan University</strong> — Master’s in Business Information Systems (Project Management Track). Expected Dec 2025.</p>
-        <div class="card-actions">
-          <button class="btn open-modal" data-modal="educationModal">Details</button>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>© 2025 Vineeth Reddy Kothakapu • Crafted with❤️</p>
-  </footer>
-
-  <!-- MODALS (popups for each section) -->
-  <div id="aboutModal" class="modal">
-    <div class="modal-box">
-      <button class="modal-close" data-close>&times;</button>
-      <h3>About Me</h3>
-      <p>Dedicated and detail-oriented Analyst with 2 years of experience in software and technical support. Strong track record in diagnosing, troubleshooting, and resolving customer issues while delivering high customer satisfaction. Seeking to leverage analytical skills and technical expertise in a challenging Analyst role.</p>
-      <p>Feel free to contact me for collaboration or opportunities.</p>
-    </div>
+    <nav class="fade-in">
+      <button onclick="openPopup('aboutPopup')"><i class="fas fa-user"></i> About</button>
+      <button onclick="openPopup('skillsPopup')"><i class="fas fa-code"></i> Skills</button>
+      <button onclick="openPopup('experiencePopup')"><i class="fas fa-briefcase"></i> Experience</button>
+      <button onclick="openPopup('educationPopup')"><i class="fas fa-graduation-cap"></i> Education</button>
+      <button onclick="openPopup('resumePopup')"><i class="fas fa-file-pdf"></i> Resume</button>
+    </nav>
   </div>
+</header>
 
-  <div id="skillsModal" class="modal">
-    <div class="modal-box">
-      <button class="modal-close" data-close>&times;</button>
-      <h3>Skills — Details</h3>
-      <h4>Technical</h4>
-      <ul>
-        <li>Azure — basics to intermediate</li>
-        <li>Active Directory — user & group administration</li>
-        <li>ServiceNow — ticket & workflow management</li>
-        <li>Python — scripts & small automation</li>
-      </ul>
-      <h4>Soft</h4>
-      <ul>
-        <li>Strong communication</li>
-        <li>Analytical thinking</li>
-        <li>Organizational skills & relationship management</li>
-      </ul>
+<main>
+  <section class="section fade-up">
+    <h2>Welcome</h2>
+    <p>Explore my journey, skills, projects, and achievements.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section fade-up" id="projects">
+    <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <h3>Project One</h3>
+        <p>Short description of Project One.</p>
+        <div class="project-meta">
+          <span class="tag">Python</span>
+          <span class="tag">Azure</span>
+        </div>
+      </article>
+      <article class="project-card">
+        <h3>Project Two</h3>
+        <p>Short description of Project Two.</p>
+        <div class="project-meta">
+          <span class="tag">ServiceNow</span>
+          <span class="tag">Automation</span>
+        </div>
+      </article>
+      <article class="project-card">
+        <h3>Project Three</h3>
+        <p>Short description of Project Three.</p>
+        <div class="project-meta">
+          <span class="tag">AD</span>
+          <span class="tag">Scripting</span>
+        </div>
+      </article>
     </div>
-  </div>
+  </section>
+</main>
 
-  <div id="experienceModal" class="modal">
-    <div class="modal-box">
-      <button class="modal-close" data-close>&times;</button>
-      <h3>Experience — HCL Technologies (June 2022 – Dec 2023)</h3>
-      <ul>
-        <li>Resolved 200+ tickets monthly across OS, apps, networks, cloud — 95% CSAT.</li>
-        <li>Reduced critical issue resolution time by 30% through cross-team collaboration.</li>
-        <li>Managed AD for 500+ users; trained team members; maintained SLA documentation.</li>
-      </ul>
-    </div>
+<!-- Popups -->
+<div id="aboutPopup" class="popup">
+  <div class="popup-content popup-transition">
+    <span class="close" onclick="closePopup('aboutPopup')">&times;</span>
+    <h2>About Me</h2>
+    <p>Dedicated Analyst with 2 years of software and technical support experience. Strong analytical and problem-solving skills.</p>
   </div>
+</div>
 
-  <div id="educationModal" class="modal">
-    <div class="modal-box">
-      <button class="modal-close" data-close>&times;</button>
-      <h3>Education</h3>
-      <p>Central Michigan University — Master’s in Business Information Systems (Project Management Track). Expected Dec 2025.</p>
-    </div>
+<div id="skillsPopup" class="popup">
+  <div class="popup-content popup-transition">
+    <span class="close" onclick="closePopup('skillsPopup')">&times;</span>
+    <h2>Skills</h2>
+    <ul>
+      <li>Azure</li>
+      <li>Active Directory</li>
+      <li>ServiceNow</li>
+      <li>Python</li>
+      <li>Networking</li>
+      <li>Microsoft Office Suite</li>
+    </ul>
+    <ul>
+      <li>Strong Communication</li>
+      <li>Analytical Thinking</li>
+      <li>Organizational Abilities</li>
+      <li>Relationship Management</li>
+    </ul>
   </div>
+</div>
 
-  <script src="script.js"></script>
+<div id="experiencePopup" class="popup">
+  <div class="popup-content popup-transition">
+    <span class="close" onclick="closePopup('experiencePopup')">&times;</span>
+    <h2>Experience</h2>
+    <p>HCL Technologies — Analyst (June 2022 – Dec 2023)</p>
+    <ul>
+      <li>Resolved 200+ tickets monthly, 95% CSAT</li>
+      <li>Collaborated with Tier 3 and development teams</li>
+      <li>Administered Active Directory for 500+ users</li>
+    </ul>
+  </div>
+</div>
+
+<div id="educationPopup" class="popup">
+  <div class="popup-content popup-transition">
+    <span class="close" onclick="closePopup('educationPopup')">&times;</span>
+    <h2>Education</h2>
+    <p>Central Michigan University — Master’s in Business Information Systems (Project Management & Data Analytics)</p>
+    <p>Expected Graduation: Dec 2025</p>
+  </div>
+</div>
+
+<div id="resumePopup" class="popup">
+  <div class="popup-content popup-transition">
+    <span class="close" onclick="closePopup('resumePopup')">&times;</span>
+    <h2>Resume</h2>
+    <a href="resume.pdf" download class="resume-btn"><i class="fas fa-download"></i> Download Resume</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
